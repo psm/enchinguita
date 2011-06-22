@@ -1,0 +1,121 @@
+body {
+	background:#333 url(../resources/img/bg.jpg);
+    -webkit-font-smoothing: antialiased;
+	font: 200 12px "Helvetica Neue", Helvetica-Neue, Helvetica, sans-serif;
+}
+
+#contenedor {
+	-webkit-box-shadow:0px 0px 10px #000;
+}
+
+#main {
+	background: #eee;
+	padding: 10px;
+	margin-top:20px;
+}
+
+h1, h2 {
+	margin:.5em 0em .5em 0em;
+}
+
+h1 {
+	margin-top:0;
+	font-size:2em;
+}
+
+h2 {
+	margin-top:1em;
+	font-size:1.5em;
+}
+
+pre {
+	background:#222;
+	color:#eee;
+	font-weight:bold;
+	padding:10px;
+	font-size:14px;
+}
+
+
+#main button, #main .button {
+	background: #ddd -webkit-gradient( linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,.4)) );
+	color:#222;
+	border:none;
+	padding:none;
+	font: bold 16px "Helvetica Neue", Helvetica-Neue, Helvetica, sans-serif;
+	padding:5px 10px;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
+	-webkit-box-shadow: 0px 1px 2px #000;
+	text-shadow:1px 1px 1px #fff;
+}
+
+
+#main .grid_4.button {
+	padding:5px 0px !important;
+	margin-top:10px;
+}
+
+#main .button {
+	display:block;
+	text-decoration:none;
+	text-align:center;
+	margin-bottom:10px;
+}
+
+#main button:hover, #main .button:hover {
+	background-color:#333;
+	color: #ddd;
+	text-shadow: -1px -1px 1px rgba(0,0,0,1);
+}
+
+#main .button.small, #main button.small {
+	margin-bottom:8px !important;
+	font-size:12px !important;
+	padding:2px 0px !important;
+	-webkit-border-radius: 5px !important;
+	width:95%;
+}
+
+#main .button.small:last-child {
+	margin-bottom:0px !important;
+}
+
+#main .button.cancel:hover, #main button.cancel:hover {
+	background-color:#f00;
+	color:#fff;
+	text-shadow: -1px -1px 1px rgba(0,0,0,.6);
+}
+
+
+footer {
+	bottom: 0px;
+	color: #fff;
+	cursor: default;
+	font-size: 11px;
+	position: fixed;
+	width:100%;
+}
+
+footer div {
+	padding:5px;
+	opacity:.5;
+}
+
+footer #pato {
+	float:left;
+}
+
+footer a {
+	color:#fff;
+	text-decoration:none;
+	padding-left:25px;
+	background:url('../resources/img/patito.png') left center no-repeat;
+	display:block;
+	line-height:20px;
+}
+
+#copirait {
+	float:right;
+}
