@@ -30,5 +30,6 @@ Para empezar, edita `main.php`. Si quieres urls bonitos, hay que hacer lo siguie
 	}
 			
 Un día que no me de huevita, documento cómo usar los drivers de la base de datos, pero ahí va el hint:
+
 <span style="color: #0000BB">
 &lt;?php&nbsp;$this<span style="color: #007700">-&gt;</span>db<span style="color: #007700">-&gt;</span>nombreDeLaTabla<span style="color: #007700">-&gt;</span>get<span style="color: #007700">(</span><span style="color: #DD0000">'campos,a,seleccionar'</span><span style="color: #007700">)-&gt;</span>find<span style="color: #007700">(array(</span><span style="color: #DD0000">'condicion'</span><span style="color: #007700">=&gt;</span><span style="color: #DD0000">'valor'</span><span style="color: #007700">));</span>?&gt;</span>
