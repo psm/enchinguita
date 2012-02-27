@@ -1,6 +1,9 @@
 #Enchinga
 
-Para empezar, edita `main.php`. Si quieres urls bonitos, hay que hacer lo siguiente:</p>
+Para empezar, edita `main.php`. Si quieres urls bonitos, hay que hacer lo siguiente:
+
+##Copiar config.default.php a config.php
+Esto es importante, si no, no vas a tener acceso a la base de datos de tu elección!
 
 ##Apache `.htaccess`
 	RewriteEngine On
@@ -19,12 +22,7 @@ Para empezar, edita `main.php`. Si quieres urls bonitos, hay que hacer lo siguie
 		rewrite ^/(css|js)/([\w,]+)(\.\1)?(l*)$ /resources/handle.php?t=$1&f=$2&legible=$4 last;
 
 		location / {
-			root /Path/to/instalación/;
-			if (-e $request_filename) {
-				break;
-			}
-			rewrite ^/?(.*)/?$ /index.php?/$1 last;
-	
+			try_files $uri $uri/ /index.php last;
 			index index.php;
 		}
 	}
@@ -32,4 +30,4 @@ Para empezar, edita `main.php`. Si quieres urls bonitos, hay que hacer lo siguie
 Un día que no me de huevita, documento cómo usar los drivers de la base de datos, pero ahí va el hint:
 
 <span style="color: #0000BB">
-&lt;?php&nbsp;$this<span style="color: #007700">-&gt;</span>db<span style="color: #007700">-&gt;</span>nombreDeLaTabla<span style="color: #007700">-&gt;</span>get<span style="color: #007700">(</span><span style="color: #DD0000">'campos,a,seleccionar'</span><span style="color: #007700">)-&gt;</span>find<span style="color: #007700">(array(</span><span style="color: #DD0000">'condicion'</span><span style="color: #007700">=&gt;</span><span style="color: #DD0000">'valor'</span><span style="color: #007700">));</span>?&gt;</span>
+&lt;?php&nbsp;$this<span style="color: #007700">-&gt;</span>db<span style="color: #007700">-&gt;</span>nombreDeLaTabla<span style="color: #007700">-&gt;</span>set<span style="color: #007700">(</span><span style="color: #DD0000">'campos,a,seleccionar'</span><span style="color: #007700">)-&gt;</span>find<span style="color: #007700">(array(</span><span style="color: #DD0000">'condicion'</span><span style="color: #007700">=&gt;</span><span style="color: #DD0000">'valor'</span><span style="color: #007700">));</span>?&gt;</span>

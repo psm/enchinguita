@@ -29,18 +29,13 @@ server {
 	rewrite ^/(css|js)/([\w,]+)(\.\1)?(l*)$ /resources/handle.php?t=$1&f=$2&legible=$4 last;
 
 	location / {
-		root /Path/to/instalación/;
-		if (-e $request_filename) {
-			break;
-		}
-		rewrite ^/?(.*)/?$ /index.php?/$1 last;
-	
+		try_files $uri $uri/ /index.php last;
 		index index.php;
 	}
 }
 			</pre>
 			
-			<p>Un día que no me de huevita, documento cómo usar los drivers de la base de datos, pero ahí va el hint: <br/><? highlight_string('<?php $this->db->nombreDeLaTabla->get(\'campos,a,seleccionar\')->find(array(\'condicion\'=>\'valor\'));?>');?>.</p>
+			<p>Un día que no me de huevita, documento cómo usar los drivers de la base de datos, pero ahí va el hint: <br/><? highlight_string('<?php $this->db->nombreDeLaTabla->set(\'campos,a,seleccionar\')->find(array(\'condicion\'=>\'valor\'));?>');?>.</p>
 		</div>
 	</div>
 	<footer>
@@ -48,7 +43,7 @@ server {
 			<a href="http://partidosurrealista.com">Partido Surrealista Mexicano</a>
 		</div>
 		<div id="copirait">
-			<span>Todos los derechos reservados, Grupo Surrealista S.A. de C.V. 2011</span>
+			<span>Todos los derechos reservados, Grupo Surrealista S.A. de C.V. 2012</span>
 		</div>
 	</footer>
 </body>
