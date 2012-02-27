@@ -1,10 +1,13 @@
 <?
-class Main extends \enchinga\controller {
+namespace app;
+use \enchinga\Controller;
+
+class Main extends Controller {
 	
 	public function index()
 	{
-		$data['version'] = $this->version;
-		$this->view('views/main', $data);
+		$data['version'] = \enchinga\VERSION;
+		$this->view('main', $data);
 	}
 
 	
